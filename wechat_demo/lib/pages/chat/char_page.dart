@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:wechat_demo/const.dart';
 import 'package:http/http.dart' as http;
 import 'package:wechat_demo/pages/chat/chat_data.dart';
+import 'package:wechat_demo/tools/http_manager.dart';
 
 
 /*
@@ -78,26 +79,43 @@ class _ChatPageState extends State<ChatPage> {
     // http.get 方法的返回值是 Future<Response>，表示该返回值可能有值，也可能没有值，有肯能有错误。
     // 只要是 Future 返回类型，我们可以使用 then 处理返回返回结果。
 
-    var chatListUrl =
-        Uri.parse('http://rap2api.taobao.org/app/mock/291253/api/chat/list');
-    var response = await http.get(chatListUrl);
-    // print('Response status: ${response.statusCode}');
-    // print('Response body: ${response.body}');
+    /// http 网络库实现网络请求。接口返回 json数据，数据转换流程是：json ==> Map ==> Model
+    // var chatListUrl =
+    //     Uri.parse('http://rap2api.taobao.org/app/mock/291253/api/chat/list');
+    // var response = await http.get(chatListUrl);
+    // // print('Response status: ${response.statusCode}');
+    // // print('Response body: ${response.body}');
+    //
+    // if (response.statusCode == 200) {
+    //   // json 转 Map
+    //   var responseBody = json.decode(response.body);
+    //
+    //   // Map 转 Model。
+    //   // .map 相当于遍历 map。item就是json，在回调中将 item 转换为 Chat模型。
+    //   List<Chat> chatList = responseBody['chat_list'].map<Chat>((item) {
+    //     return Chat.fromJson(item);
+    //   }).toList();
+    //
+    //   return chatList;
+    // } else {
+    //   throw Exception('Response status: ${response.statusCode}');
+    // }
 
-    if (response.statusCode == 200) {
-      // json 转 Map
-      var responseBody = json.decode(response.body);
+    /// dio 网络库实现网络请求。接口返回的就是 Map数据，数据转换流程是：Map ==> Model
+    var rp = await HttpManager.dio.get('http://rap2api.taobao.org/app/mock/291253/api/chat/list');
 
-      // Map 转 Model。
-      // .map 相当于遍历 map。item就是json，在回调中将 item 转换为 Chat模型。
-      List<Chat> chatList = responseBody['chat_list'].map<Chat>((item) {
+    if (rp.statusCode == success)  {
+
+      List<Chat> chatList = rp.data['chat_list'].map<Chat>((item) {
         return Chat.fromJson(item);
       }).toList();
 
       return chatList;
+
     } else {
-      throw Exception('Response status: ${response.statusCode}');
+      throw Exception('Response status: ${rp.statusCode}');
     }
+
   }
 
   // loading...
