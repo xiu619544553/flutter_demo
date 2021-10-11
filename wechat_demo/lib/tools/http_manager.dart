@@ -14,7 +14,7 @@ class HttpManager {
   }) async {
 
     // Options 可以设置头信息、超时等
-    final options = Options(headers: headers, receiveTimeout: timeout);
+    final options = Options(headers: headers, receiveTimeout: receiveTimeout);
 
     final response = await dio.get(url,
         queryParameters: queryParameters,
@@ -24,7 +24,7 @@ class HttpManager {
     return HttpResponse(
         statusCode: response.statusCode ?? -1,
         statusMessage: response.statusMessage ?? '网络请求失败',
-        data: response.data);
+        data: response.data ?? Map());
   }
 
   // static Future request(String url, {
@@ -69,8 +69,8 @@ class HttpResponse<T> {
 // 网络请求进度回调
 typedef ProgressCallback = void Function(int count, int total);
 
-// 网络请求超时时间15秒，单位：毫秒
-const int timeout = 15000;
+// 接收数据的最长时限10秒，单位：毫秒
+const int receiveTimeout = 10000;
 
 // 接口请求状态码
 const int success = 200;

@@ -11,10 +11,13 @@ class DiscoverPage extends StatefulWidget {
   _DiscoverPageState createState() => _DiscoverPageState();
 }
 
-class _DiscoverPageState extends State<DiscoverPage> {
+class _DiscoverPageState extends State<DiscoverPage> with AutomaticKeepAliveClientMixin {
 
   @override
   Widget build(BuildContext context) {
+
+    super.build(context);
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: widget._themeColor,  // widget 代表 DiscoverPage 对象。如果该变量不会发生变化，也可以在该对象中声明。
@@ -118,4 +121,8 @@ class _DiscoverPageState extends State<DiscoverPage> {
       ),
     );
   }
+
+  @override
+  // TODO: implement wantKeepAlive
+  bool get wantKeepAlive => true;
 }

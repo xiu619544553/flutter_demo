@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:wechat_demo/const.dart';
 import 'package:wechat_demo/pages/discover/discover_child_page.dart';
@@ -12,7 +14,7 @@ class FriendPage extends StatefulWidget {
   _FriendPageState createState() => _FriendPageState();
 }
 
-class _FriendPageState extends State<FriendPage> {
+class _FriendPageState extends State<FriendPage> with AutomaticKeepAliveClientMixin {
 
   /// 字典放 word 和高度的对应数据
   final Map _groupOffSetMap = {
@@ -119,6 +121,8 @@ class _FriendPageState extends State<FriendPage> {
   @override
   Widget build(BuildContext context) {
 
+    super.build(context);
+
     return Scaffold(
       appBar: AppBar(
         /// 没有底部的边栏
@@ -173,4 +177,8 @@ class _FriendPageState extends State<FriendPage> {
       ),
     );
   }
+
+  @override
+  // TODO: implement wantKeepAlive
+  bool get wantKeepAlive => true;
 }

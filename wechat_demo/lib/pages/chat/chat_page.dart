@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:wechat_demo/const.dart';
 import 'package:http/http.dart' as http;
 import 'package:wechat_demo/pages/chat/chat_data.dart';
+import 'package:wechat_demo/pages/chat/search_view.dart';
 import 'package:wechat_demo/tools/http_manager.dart';
 
 
@@ -20,7 +21,21 @@ import 'package:http/http.dart' as http hide get;
 show 只导入指定的方法
 */
 
+/// 如何使 StatefulWidget 类保存即有状态。当我们切换tab，在切换回来后，是当前叶敏保存状态
+/*
+概念：
+  混入 Mixins
+使用 with来混入一个或多个Mixin
 
+前置条件：当前小部件在渲染树中
+1、遵守 with AutomaticKeepAliveClientMixin
+2、重写实现 get 方法
+  @override
+  // TODO: implement wantKeepAlive
+  bool get wantKeepAlive => true;
+3、当前类 build方法调用父类 super.build(context);
+
+*/
 
 class ChatPage extends StatefulWidget {
   const ChatPage({Key? key}) : super(key: key);
@@ -29,7 +44,11 @@ class ChatPage extends StatefulWidget {
   _ChatPageState createState() => _ChatPageState();
 }
 
-class _ChatPageState extends State<ChatPage> {
+class _ChatPageState extends State<ChatPage> with AutomaticKeepAliveClientMixin {
+
+  @override
+  // TODO: implement wantKeepAlive
+  bool get wantKeepAlive => true;
 
   // 构造 PopupMenuItem
   Widget _buildPopupMenuItem(String imageAsset, String title) {
@@ -127,7 +146,14 @@ class _ChatPageState extends State<ChatPage> {
 
   // 返回cell
   Widget _cellForRow(BuildContext context, int index) {
-    Chat model = _chatDatas[index];
+
+    // 搜索框
+    if (index == 0) {
+      return ChatSearchCell(datas: _chatDatas);
+    }
+
+    // 用户聊天cell
+    Chat model = _chatDatas[index - 1];
     return ListTile(
       title: Text(model.name ?? ''),
       subtitle: Container(
@@ -154,6 +180,7 @@ class _ChatPageState extends State<ChatPage> {
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -199,7 +226,7 @@ class _ChatPageState extends State<ChatPage> {
       ),
       body: Container(
         child: _chatDatas.length == 0 ? _loading() : ListView.builder(
-            itemCount: _chatDatas.length,
+            itemCount: 1 + _chatDatas.length, // 1是搜索框cell
             itemBuilder: _cellForRow,
         ),
       ),

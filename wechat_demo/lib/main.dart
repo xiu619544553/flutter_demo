@@ -42,6 +42,17 @@ MediaQuery.removePadding(
 )
 
 注：详细用法可以参考 `mine_page.dart` 页面
+
+
+ListView在 iOS刘海设备中会默认有一个头，防止刘海遮挡ListView内容，如果不需要，需要开发人员自行去掉。可以参考 search_page.dart
+MediaQuery.removePadding(
+                  context: context,
+                  removeTop: true, // 移除ListView的默认头
+                  child: ListView.builder(
+                    itemBuilder: _cellForRow,
+                    itemCount: 10,
+                  )
+              )
 */
 
 
@@ -104,6 +115,8 @@ Json 和 Map 互相转化：
 void main() {
   runApp(MyApp());
 }
+
+
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
