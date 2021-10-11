@@ -6,15 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3eb3eb98-4f1b-46f0-a88c-5836ced17501" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/chat/chat_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/chat/chat_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/chat/search_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/chat/search_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/chat/search_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/chat/search_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/discover/discover_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/discover/discover_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/friends/friend_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/friends/friend_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/mine/mine_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/mine/mine_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/root_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/root_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/tools/http_manager.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/tools/http_manager.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
