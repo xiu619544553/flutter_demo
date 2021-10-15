@@ -72,5 +72,7 @@ iOSInjectionProject/
 
 # 忽略编译器编译产物
 .dart_tool/
+.ios/
+.android/
 
 

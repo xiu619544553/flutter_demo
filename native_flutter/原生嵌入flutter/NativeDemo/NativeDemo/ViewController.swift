@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     /// FlutterBasicMessageChannel 案例
     var messageChannel: FlutterBasicMessageChannel?
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
