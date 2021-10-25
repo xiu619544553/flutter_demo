@@ -5,32 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3eb3eb98-4f1b-46f0-a88c-5836ced17501" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../flutter_boost_demo/SwiftDemo/SwiftDemo.xcodeproj/project.pbxproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../flutter_boost_demo/SwiftDemo/SwiftDemo.xcodeproj/project.xcworkspace/contents.xcworkspacedata" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../flutter_boost_demo/SwiftDemo/SwiftDemo.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../flutter_boost_demo/SwiftDemo/SwiftDemo/AppDelegate.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../flutter_boost_demo/SwiftDemo/SwiftDemo/Assets.xcassets/AccentColor.colorset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../flutter_boost_demo/SwiftDemo/SwiftDemo/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../flutter_boost_demo/SwiftDemo/SwiftDemo/Assets.xcassets/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../flutter_boost_demo/SwiftDemo/SwiftDemo/Base.lproj/LaunchScreen.storyboard" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../flutter_boost_demo/SwiftDemo/SwiftDemo/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../flutter_boost_demo/SwiftDemo/SwiftDemo/TKBoostDelegate.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../flutter_boost_demo/SwiftDemo/SwiftDemo/TKFlutterRouteManager.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../flutter_boost_demo/SwiftDemo/SwiftDemo/ViewController.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../flutter_boost_demo/flutter_module/.metadata" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../flutter_boost_demo/flutter_module/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../flutter_boost_demo/flutter_module/flutter_module.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../flutter_boost_demo/flutter_module/flutter_module_android.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../flutter_boost_demo/flutter_module/lib/flutter_binding.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../flutter_boost_demo/flutter_module/lib/lifestyle_binding.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../flutter_boost_demo/flutter_module/lib/main.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../flutter_boost_demo/flutter_module/lib/main_page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../flutter_boost_demo/flutter_module/lib/simple_page.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../flutter_boost_demo/flutter_module/pubspec.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../flutter_boost_demo/flutter_module/pubspec.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../flutter_boost_demo/flutter_module/test/widget_test.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../native_flutter/原生嵌入flutter/NativeDemo/NativeDemo/ViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../native_flutter/原生嵌入flutter/NativeDemo/NativeDemo/ViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flutter_widgets/nested_scrollview/images/sand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flutter_widgets/nested_scrollview/lib/home_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flutter_widgets/nested_scrollview/lib/nested_scrollview_demo.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flutter_widgets/nested_scrollview/lib/nested_scrollview_demo2.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flutter_widgets/nested_scrollview/lib/nested_scrollview_tabbar_demo.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flutter_widgets/nested_scrollview/lib/scroll_controller.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flutter_widgets/nested_scrollview/lib/tabbar_nestedscrollview.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../flutter_widgets/nested_scrollview/lib/tabbar_view_demo.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
