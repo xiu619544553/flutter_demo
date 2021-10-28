@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3eb3eb98-4f1b-46f0-a88c-5836ced17501" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../flutter_widgets/nested_scrollview/lib/list_view/animated_list_demo.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../flutter_widgets/nested_scrollview/lib/list_view/grid_view_demo.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../flutter_widgets/nested_scrollview/lib/scrollcontroller/scroll_notification_demo.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flutter_widgets/nested_scrollview/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/../flutter_widgets/nested_scrollview/.packages" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../flutter_widgets/nested_scrollview/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../flutter_widgets/nested_scrollview/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flutter_widgets/scrollable_component/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/../flutter_widgets/scrollable_component/.packages" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flutter_widgets/scrollable_component/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../flutter_widgets/scrollable_component/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

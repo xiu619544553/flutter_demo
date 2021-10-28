@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:scrollable_component/custom_scrollview/custom_scrollview_demo1.dart';
+import 'package:scrollable_component/custom_scrollview/custom_scrollview_demo2.dart';
 import 'package:scrollable_component/home_page.dart';
 import 'package:scrollable_component/list_view/animated_list_demo.dart';
 import 'package:scrollable_component/list_view/grid_view_demo.dart';
@@ -14,6 +16,10 @@ import 'package:scrollable_component/tabbar_view/tabbar_view_demo1.dart';
 import 'package:scrollable_component/tabbar_view_demo.dart';
 
 import 'list_view/list_view_demo.dart';
+
+
+/// Flutter 中常用的 Sliver
+/// https://book.flutterchina.club/chapter6/custom_scrollview.html#_6-10-2-flutter-%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84-sliver
 
 void main() {
   runApp(MyApp());
@@ -65,6 +71,11 @@ class RootPage extends StatelessWidget {
     "PageView 简单使用",
     "TabBarView 通过自定义的 TabController 实现联动",
     "TabBarView 通过 DefaultTabController 实现联动",
+    "CustomScrollView 提供公共的 Scrollable 和 ViewPort",
+    "CustomScrollView 示例",
+    "Material 控件",
+    "SliverToBoxAdapter 与 CustomScrollView",
+    "SliverPersistenHeaderDelegate",
   ];
 
   Widget _itemBuilder(BuildContext context, int index) {
@@ -121,6 +132,16 @@ class RootPage extends StatelessWidget {
             return TabBarViewDemo1(num: 0,);
           } else if (index == 22) {
             return TabBarViewDemo1(num: 1,);
+          } else if (index == 23) {
+            return CustomScrollViewDemo1();
+          } else if (index == 24) {
+            return CustomScrollViewDemo2();
+          } else if (index == 25) {
+            return MaterialDemo();
+          } else if (index == 26) {
+            return CustomScrollViewDemo3();
+          } else if (index == 27) {
+            return PersistentHeaderRoute();
           }
 
           return Center(
@@ -147,6 +168,31 @@ class RootPage extends StatelessWidget {
         itemBuilder: _itemBuilder,
         itemCount: _itemTitles.length,
         itemExtent: 50.0, // 列表项高度固定时
+      ),
+    );
+  }
+}
+
+
+/// Material 是个没有实际效果的控件，也是个底层的控件,可以用来设置阴影，形状，阴影，颜色，文字格式等等
+class MaterialDemo extends StatelessWidget {
+  const MaterialDemo({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Colors.blueAccent,
+      shape: new BeveledRectangleBorder(//斜角矩形边框
+        side:new BorderSide(
+          width: 1.0,
+          color: Colors.blueAccent,
+          style: BorderStyle.none,
+        ),
+        borderRadius:new BorderRadius.circular(10.0),
+      ),
+      child: new Container(
+        padding: EdgeInsets.all(20.0),
+        child: new Text('斜角矩形边框'),
       ),
     );
   }
