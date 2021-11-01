@@ -47,6 +47,7 @@ class MyApp extends StatelessWidget {
 }
 
 class RootPage extends StatelessWidget {
+
   final List<String> _itemTitles = [
     "NestedScrollView 简单使用",
     "NestedScrollView、SliverAppBar 展开折叠",
@@ -75,7 +76,7 @@ class RootPage extends StatelessWidget {
     "CustomScrollView 示例",
     "Material 控件",
     "SliverToBoxAdapter 与 CustomScrollView",
-    "SliverPersistenHeaderDelegate",
+    "SliverPersistentHeaderDelegate",
   ];
 
   Widget _itemBuilder(BuildContext context, int index) {
