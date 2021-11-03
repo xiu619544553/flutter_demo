@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 
+
+/// NestedScrollView 与 TabBar 配合使用
 class NestedScrollViewTabbarDemo extends StatefulWidget {
   const NestedScrollViewTabbarDemo({Key? key}) : super(key: key);
 

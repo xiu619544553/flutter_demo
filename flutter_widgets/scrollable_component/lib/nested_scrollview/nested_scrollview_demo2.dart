@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// NestedScrollView、SliverAppBar 展开与折叠
 class NestedScrollViewDemo2 extends StatefulWidget {
   const NestedScrollViewDemo2({Key? key}) : super(key: key);
 
@@ -24,7 +25,9 @@ class _NestedScrollViewDemo2State extends State<NestedScrollViewDemo2> {
         return <Widget>[
           SliverAppBar(
             expandedHeight: 230.0,
+            /// appBar是否置顶 是否固定在顶部 为true是固定，为false是不固定可滑出屏幕
             pinned: true,
+            /// 展开折叠的区域 通常使用 FlexibleSpaceBar
             flexibleSpace: FlexibleSpaceBar(
               title: Text('复仇者联盟'),
               background: Image.network(

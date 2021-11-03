@@ -4,6 +4,7 @@ import 'package:scrollable_component/custom_scrollview/custom_scrollview_demo2.d
 import 'package:scrollable_component/home_page.dart';
 import 'package:scrollable_component/list_view/animated_list_demo.dart';
 import 'package:scrollable_component/list_view/grid_view_demo.dart';
+import 'package:scrollable_component/nested_scrollview/appbar_demo1.dart';
 import 'package:scrollable_component/nested_scrollview/nested_scrollview_demo.dart';
 import 'package:scrollable_component/nested_scrollview/nested_scrollview_demo2.dart';
 import 'package:scrollable_component/nested_scrollview_tabbar_demo.dart';
@@ -55,7 +56,7 @@ class RootPage extends StatelessWidget {
     "MyHomePage",
     "ScrollController 使用",
     "TabBarView",
-    "嵌套可滚动组件 NestedScrollView",
+    "NestedScrollView  嵌套 TabBarView",
     "SingleChildScrollView",
     "ListView 默认构造函数，适合少量子组件",
     "ListView.builder 按需动态构建列表项",
@@ -77,6 +78,8 @@ class RootPage extends StatelessWidget {
     "Material 控件",
     "SliverToBoxAdapter 与 CustomScrollView",
     "SliverPersistentHeaderDelegate",
+    "AppBar和NestedScrollView - 示例1",
+    "AppBar和NestedScrollView - 示例2",
   ];
 
   Widget _itemBuilder(BuildContext context, int index) {
@@ -143,6 +146,10 @@ class RootPage extends StatelessWidget {
             return CustomScrollViewDemo3();
           } else if (index == 27) {
             return PersistentHeaderRoute();
+          } else if (index == 28) {
+            return SnapAppBar();
+          } else if (index == 29) {
+            return SnapAppBar2();
           }
 
           return Center(
